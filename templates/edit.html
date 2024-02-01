@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form</title>
+</head>
+
+<body>
+    <form action="{{url_for('update_data',id=books.id)}}" method="post">
+        <h1>Edit Data</h1>
+        {% if books %}
+        {{ books }} <br><br>
+
+
+        <label for="">Title</label>
+        <input type="text" name="title" id="title" value="{{books.title}}"><br><br>
+
+        <label for="">Author</label>
+        <input type="text" name="author" id="author" value="{{books.author}}"><br><br>
+
+        <label for="">Price</label>
+        <input type="number" name="price" id="price" value="{{books.price}}"><br><br>
+
+        <label for="">Year-Published</label>
+        <input type="number" name="year_published" id="published" value="{{books.year_published}}"><br><br>
+
+        <input type="submit" value="UPDATE">
+
+        {% else %}
+        <p>Books not found</p>
+        {% endif %}
+    </form>
+</body>
+
+</html>

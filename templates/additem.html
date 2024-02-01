@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddNewItems Form..</title>
+</head>
+
+<body>
+
+    <h1>Add New Books</h1>
+    <form action="{{url_for('add_new_items')}}" method="post">
+        <label for="">Id</label>
+        <input type="number" name="id" id="id"><br><br>
+
+        <label for="">Title</label>
+        <input type="text" name="title" id="title"><br><br>
+
+        <label for="">Author</label>
+        <input type="text" name="author" id="author"><br><br>
+
+        <label for="">Price</label>
+        <input type="number" name="price" id="price"><br><br>
+
+        <label for="">Year-Published</label>
+        <input type="number" name="year_published" id="published"><br><br>
+
+        <input type="submit" value="Submit" onsubmit="add_new_items()">
+
+
+    </form>
+
+</body>
+
+</html>
